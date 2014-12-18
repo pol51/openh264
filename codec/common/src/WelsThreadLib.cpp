@@ -46,7 +46,9 @@
 #include <sched.h>
 #elif !defined(_WIN32)
 #include <sys/types.h>
+#ifndef ANDROID_NDK
 #include <sys/sysctl.h>
+#endif
 #include <sys/param.h>
 #include <unistd.h>
 #ifdef __APPLE__
